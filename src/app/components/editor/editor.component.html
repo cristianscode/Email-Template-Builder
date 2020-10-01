@@ -1,0 +1,77 @@
+<div class="row" style="min-width: 1000px;">
+    <div class="" style="width: 442px; background-color: #e9ecef;">
+        <app-tool-sidebar style="width: 442px;"></app-tool-sidebar>
+    </div>
+    <div class="col" id="canvas" style="background-color: white; padding: 0px;">
+        <section class="overflow-auto p-4" style="height: 100%;">
+            <div id="emailTemplate">
+                <!DOCTYPE html>
+                <html id="emailTemplateHTML" lang="en" style="padding: 20px;">
+
+                <head id="emailTemplateHead">
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+
+                <body id="mainTemplateBody" style="min-height: 80vh;">
+                    <ul id="emailTemplateBody" dndDropzone dndEffectAllowed="copyMove"
+                        (dndDrop)="onDrop($event, toolBarService.draggableItems)">
+                        <li dndPlaceholderRef class="dndPlaceholder"></li>
+                        <li *ngFor="let item of toolBarService.draggableItems; let i = index" [dndDraggable]="item"
+                            (dndStart)="onDragStart($event)" id="{{'draggableListItem' + i}}">
+                        </li>
+                    </ul>
+                </body>
+
+                </html>
+            </div>
+        </section>
+    </div>
+    <div class="" style="width:100px;">
+        <div style="max-width: 75px; background-color: #e9ecef; position: fixed;">
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn sidenav-btns" (click)="preview()"><i class="fas fa-eye fa-2x"></i>
+                        <label class="sidenav-labels" for="">Preview</label>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <button class="btn sidenav-btns" (click)="getHTML(false)" data-toggle="modal"
+                        data-target="#displayHTML"><i class="fas fa-file-code fa-2x"></i>
+                        <label class="sidenav-labels" for="">HTML</label>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <button class="btn sidenav-btns" href="#"><i class="fas fa-paper-plane fa-2x"></i>
+                        <label class="sidenav-labels" for="">Send Test</label>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <button class="btn sidenav-btns" (click)="restart()">
+                        <i class="fas fa-undo-alt fa-2x"></i>
+                        <label class="sidenav-labels" for="">Reset</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="displayHTML" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">HTML</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="font-size: small;">
+                    {{templateHTML}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

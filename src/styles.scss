@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.ngx-file-drop__drop-zone {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 200px !important;
+    border: 1px dashed #B8B7B8 !important;
+    border-radius: 5px !important;
+    // background-color: #F5F5F5 !important;
+    cursor: pointer !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.card, .card-body{
+  background-color: transparent;
+  border: none;
+}
+
+.card-header{
+  background-color: #dee2e6;
+  border-radius: 0px;
+}

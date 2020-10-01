@@ -1,0 +1,73 @@
+.componentItem{
+    background-color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    min-width: 95px;
+    max-width: 95px;
+    height: 95px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px;
+    cursor: -webkit-grab;
+    transition-duration: 0.15s;
+    transition-property: box-shadow;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex: 1 1 0%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-image: initial;
+    border-radius: 4px;
+}
+
+.componentItem:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-image: initial;
+}
+
+li{
+    list-style-type: none;
+}
+
+.nav-link{
+    cursor: pointer;
+}
+.nav-link:hover{
+    font-size: 20px;
+}
+
+.sidenav-btns{
+    color: #6c757d;
+    text-align: center;
+    width: 100%;
+    padding-bottom:10px ;
+    padding-top:10px ;
+    border-radius: 0px;
+}
+.sidenav-btns:hover{
+    color: #343a40;
+    background-color: #dee2e6;
+}
+.sidenav-labels{
+    font-size: small;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 800px;
+        margin: 1.75rem auto;
+    }
+}
+
+.link, .link:hover{
+    color: #31BFC4;
+}
