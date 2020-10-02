@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header" style="background-color: transparent;">Image Upload</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <input hidden type="file" #fileInput (change)="dropped($event.target.files)" />
+                <ngx-file-drop (click)="fileInput.click()" (onFileDrop)="dropped($event)">
+                    <ng-template ngx-file-drop-content-tmp>
+                        <div class="row container">
+                            <div class="col-12 mb-3">
+                                <div class="center">
+                                    <i class="fas fa-cloud-upload-alt fa-3x" style="color: #E0E0E0;"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p style="text-align: center;">
+                                    Drop files to upload or <a class="link"><u>browse</u></a>
+                                </p>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ngx-file-drop>
+            </div>
+        </div>
+    </div>
+</div>

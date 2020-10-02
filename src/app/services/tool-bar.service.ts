@@ -51,7 +51,7 @@ export class ToolBarService {
     if (this.selectedCol != null && this.selectedRow != null) {
       this.replaceFromBody(
         this.selectedRow + '' + this.selectedCol + this.type,
-        this.newImage('../../assets/imagePlaceholder.jpg', this.selectedRow + this.selectedCol)
+        this.newImage('../../assets/placeholderImage.png', this.selectedRow + this.selectedCol)
       );
     } else {
       var row = this.newRow();
@@ -59,7 +59,7 @@ export class ToolBarService {
       var col = document.createElement('div');
       col.className = 'col-md-12';
       col.id = row.id + 'CriCol' + 1;
-      col.appendChild(this.newImage('../../assets/imagePlaceholder.jpg', col.id));
+      col.appendChild(this.newImage('../../assets/placeholderImage.png', col.id));
       col = this.columnStyling(col);
       row.appendChild(col);
       this.addToBody(row);

@@ -10,12 +10,14 @@ import { EditorComponent } from './components/editor/editor.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { DndModule } from 'ngx-drag-drop';
+import { ImageDropComponent } from './components/image-drop/image-drop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolSidebarComponent,
-    EditorComponent
+    EditorComponent,
+    ImageDropComponent
   ],
   imports: [
     BrowserModule,
